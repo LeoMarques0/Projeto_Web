@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
 
+    Player_Main main;
+
     Rigidbody2D rb;
     float ver, hor;
 
@@ -15,11 +17,12 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        main = GetComponent<Player_Main>();
+
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Updates()
     {
         ver = Input.GetAxisRaw("Vertical");
         hor = Input.GetAxisRaw("Horizontal");
@@ -27,23 +30,19 @@ public class Player_Movement : MonoBehaviour
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -30, 30), Mathf.Clamp(rb.velocity.y, -30, 30));
 
         handling = onSlowMotion ? 300 : 150;
-            
-        SlowMotion();
     }
 
-    private void FixedUpdate()
-    {
-        Handling();
-    }
-
-    void Handling()
+    public void Handling()
     {
         rb.AddForce(spd * transform.up * ver * Time.deltaTime);
 
         transform.eulerAngles += new Vector3(0, 0, -hor * handling * Time.deltaTime);
+
+        if(ver > 0)
+            main.energy -= 1 * Time.deltaTime;
     }
 
-    void SlowMotion()
+    public void SlowMotion()
     {
         if(Input.GetKey(KeyCode.Space))
         {
@@ -59,6 +58,9 @@ public class Player_Movement : MonoBehaviour
 
             onSlowMotion = false;
         }
+
+        if (onSlowMotion)
+            main.energy -= 1 * Time.deltaTime;
     }
 
 
