@@ -8,7 +8,9 @@ public class Player_Movement : MonoBehaviour
     Player_Main main;
 
     Rigidbody2D rb;
-    float ver, hor;
+
+    [HideInInspector]
+    public float ver, hor;
 
     bool onSlowMotion;
 
@@ -27,14 +29,15 @@ public class Player_Movement : MonoBehaviour
         ver = Input.GetAxisRaw("Vertical");
         hor = Input.GetAxisRaw("Horizontal");
 
-        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -30, 30), Mathf.Clamp(rb.velocity.y, -30, 30));
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -20, 20), Mathf.Clamp(rb.velocity.y, -20, 20));
 
         handling = onSlowMotion ? 300 : 150;
     }
 
     public void Handling()
     {
-        rb.AddForce(spd * transform.up * ver * Time.deltaTime);
+        if(ver >= 0)
+            rb.AddForce(spd * transform.up * ver * Time.deltaTime);
 
         transform.eulerAngles += new Vector3(0, 0, -hor * handling * Time.deltaTime);
 
