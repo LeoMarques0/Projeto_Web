@@ -24,7 +24,7 @@ public class Player_Gun : MonoBehaviour
 
     public void Shoot()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && canShoot)
+        if (Input.GetKey(KeyCode.X) && canShoot)
         {
             StartCoroutine(ShotDelay());
             print(transform.eulerAngles.z);

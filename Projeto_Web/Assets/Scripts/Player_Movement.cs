@@ -8,6 +8,10 @@ public class Player_Movement : MonoBehaviour
     Player_Main main;
 
     Rigidbody2D rb;
+    
+
+    public ParticleSystem[] smokes;
+    ParticleSystem.EmissionModule[] smokesEmission;
 
     [HideInInspector]
     public float ver, hor;
@@ -22,6 +26,10 @@ public class Player_Movement : MonoBehaviour
         main = GetComponent<Player_Main>();
 
         rb = GetComponent<Rigidbody2D>();
+
+        smokesEmission = new ParticleSystem.EmissionModule[smokes.Length];
+        for(int x = 0; x < smokes.Length; x++)
+            smokesEmission[x] = smokes[x].emission;
     }
 
     public void Updates()
@@ -36,18 +44,29 @@ public class Player_Movement : MonoBehaviour
 
     public void Handling()
     {
-        if(ver >= 0)
+        if (ver >= 0)
             rb.AddForce(spd * transform.up * ver * Time.deltaTime);
+        
 
         transform.eulerAngles += new Vector3(0, 0, -hor * handling * Time.deltaTime);
 
-        if(ver > 0)
+        if (ver > 0)
+        {
             main.energy -= 1 * Time.deltaTime;
+
+            for (int x = 0; x < smokesEmission.Length; x++)
+                smokesEmission[x].rateOverTime = 200;
+        }
+        else
+        {
+            for (int x = 0; x < smokesEmission.Length; x++)
+                smokesEmission[x].rateOverTime = 0;
+        }
     }
 
     public void SlowMotion()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Z))
         {
             Time.timeScale = .5f;
             Time.fixedDeltaTime = .02f * Time.timeScale;
