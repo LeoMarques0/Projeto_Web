@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Player_Movement : MonoBehaviour
     Player_Main main;
 
     Rigidbody2D rb;
+    ChromaticAberration chromaticAberration;
     
 
     public ParticleSystem[] smokes;
@@ -20,9 +22,15 @@ public class Player_Movement : MonoBehaviour
 
     public float spd, handling;
 
+    public float moveEnergyCost, slowMoEnergyCost;
+
     // Start is called before the first frame update
     void Start()
     {
+        PostProcessVolume volume = Camera.main.GetComponent<PostProcessVolume>();
+
+        volume.profile.TryGetSettings(out chromaticAberration);
+
         main = GetComponent<Player_Main>();
 
         rb = GetComponent<Rigidbody2D>();
@@ -44,16 +52,25 @@ public class Player_Movement : MonoBehaviour
 
     public void Handling()
     {
-        if (ver >= 0)
-            rb.AddForce(spd * transform.up * ver * Time.deltaTime);
-        
-
         transform.eulerAngles += new Vector3(0, 0, -hor * handling * Time.deltaTime);
 
         if (ver > 0)
         {
-            main.energy -= 1 * Time.deltaTime;
+            rb.AddForce(spd * transform.up * ver * Time.deltaTime);
+            main.energy -= moveEnergyCost * Time.deltaTime;
 
+            TurnParticlesOnOff(true);
+        }
+        else
+        {
+            TurnParticlesOnOff(false);
+        }
+    }
+
+    public void TurnParticlesOnOff(bool isOn)
+    {
+        if(isOn)
+        {
             for (int x = 0; x < smokesEmission.Length; x++)
                 smokesEmission[x].rateOverTime = 200;
         }
@@ -71,6 +88,12 @@ public class Player_Movement : MonoBehaviour
             Time.timeScale = .5f;
             Time.fixedDeltaTime = .02f * Time.timeScale;
 
+            if (!onSlowMotion)
+            {
+                StopAllCoroutines();
+                StartCoroutine(SlowMotionEffect(true));
+            }
+
             onSlowMotion = true;
         }
         else
@@ -78,11 +101,42 @@ public class Player_Movement : MonoBehaviour
             Time.timeScale = 1;
             Time.fixedDeltaTime = .02f * Time.timeScale;
 
+            if (onSlowMotion)
+            {
+                StopAllCoroutines();
+                StartCoroutine(SlowMotionEffect(false));
+            }
+
             onSlowMotion = false;
         }
 
         if (onSlowMotion)
-            main.energy -= 1 * Time.deltaTime;
+            main.energy -= slowMoEnergyCost * Time.deltaTime;
+    }
+
+    public IEnumerator SlowMotionEffect(bool activate)
+    {
+
+        WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
+
+        if (activate)
+        {
+            while(chromaticAberration.intensity.value < .5f)
+            {
+                chromaticAberration.intensity.value += 2.5f * Time.deltaTime;
+                chromaticAberration.intensity.value = Mathf.Clamp(chromaticAberration.intensity.value, 0, .5f);
+                yield return new WaitForFixedUpdate();
+            }
+        }
+        else
+        {
+            while (chromaticAberration.intensity.value > 0)
+            {
+                chromaticAberration.intensity.value -= 2.5f * Time.deltaTime;
+                chromaticAberration.intensity.value = Mathf.Clamp(chromaticAberration.intensity.value, 0, .5f);
+                yield return new WaitForFixedUpdate();
+            }
+        }
     }
 
 

@@ -8,7 +8,7 @@ public class Player_Gun : MonoBehaviour
 
     public ParticleSystem shot;
 
-    public float shotDelay;
+    public float shotDelay, gunEnergyCost;
 
     ParticleSystem.MainModule shotMain;
 
@@ -27,11 +27,10 @@ public class Player_Gun : MonoBehaviour
         if (Input.GetKey(KeyCode.X) && canShoot)
         {
             StartCoroutine(ShotDelay());
-            print(transform.eulerAngles.z);
             shotMain.startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
             shot.Play();
 
-            main.energy -= 1;
+            main.energy -= gunEnergyCost;
         }
     }
 
