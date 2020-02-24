@@ -20,6 +20,7 @@ public class Player_Main : MonoBehaviour
     public Animator boostAnim;
     public Slider energyBar;
     public Transform canvasObj;
+    public GameObject pauseMenu;
 
     public float maxEnergy;
 
@@ -56,6 +57,7 @@ public class Player_Main : MonoBehaviour
 
         AnimationValues();
         StateManager();
+        Pause();
 
     }
 
@@ -98,6 +100,15 @@ public class Player_Main : MonoBehaviour
     void EnergyBar()
     {
         energyBar.value = energy / maxEnergy;
+    }
+
+    void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

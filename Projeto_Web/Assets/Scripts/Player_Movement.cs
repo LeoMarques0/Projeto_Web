@@ -19,10 +19,16 @@ public class Player_Movement : MonoBehaviour
     public float ver, hor;
 
     bool onSlowMotion;
+    float pitch = 1;
 
     public float spd, handling;
 
     public float moveEnergyCost, slowMoEnergyCost;
+
+    //Sounds Variables
+    public AudioSource engine;
+    public AudioSource slowMotion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +62,8 @@ public class Player_Movement : MonoBehaviour
 
         if (ver > 0)
         {
+            if (!engine.isPlaying)
+                engine.Play();
             rb.AddForce(spd * transform.up * ver * Time.deltaTime);
             main.energy -= moveEnergyCost * Time.deltaTime;
 
@@ -63,6 +71,8 @@ public class Player_Movement : MonoBehaviour
         }
         else
         {
+            if (engine.isPlaying)
+                engine.Stop();
             TurnParticlesOnOff(false);
         }
     }
@@ -119,22 +129,50 @@ public class Player_Movement : MonoBehaviour
 
         WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
 
+
         if (activate)
         {
-            while(chromaticAberration.intensity.value < .5f)
+            slowMotion.Play();
+
+            while (chromaticAberration.intensity.value < .5f)
             {
+                pitch -= 2.5f * Time.deltaTime;
+                pitch = Mathf.Clamp(pitch, .5f, 1);
+                ChangePitch(pitch);
+
                 chromaticAberration.intensity.value += 2.5f * Time.deltaTime;
                 chromaticAberration.intensity.value = Mathf.Clamp(chromaticAberration.intensity.value, 0, .5f);
+                
                 yield return new WaitForFixedUpdate();
             }
+
+            slowMotion.Stop();
         }
         else
         {
+            slowMotion.Stop();
+
             while (chromaticAberration.intensity.value > 0)
             {
+                pitch += 2.5f * Time.deltaTime;
+                pitch = Mathf.Clamp(pitch, .5f, 1);
+                ChangePitch(pitch);
+
                 chromaticAberration.intensity.value -= 2.5f * Time.deltaTime;
                 chromaticAberration.intensity.value = Mathf.Clamp(chromaticAberration.intensity.value, 0, .5f);
+                
                 yield return new WaitForFixedUpdate();
+            }
+        }
+    }
+
+    void ChangePitch(float pitch)
+    {
+        if (GameManager.singleton.sounds.Length > 0)
+        {
+            foreach (AudioSource aS in GameManager.singleton.sounds)
+            {
+                aS.pitch = pitch;
             }
         }
     }

@@ -14,6 +14,9 @@ public class Player_Gun : MonoBehaviour
 
     bool canShoot = true;
 
+    //Sound Variables
+    public AudioSource shotSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class Player_Gun : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.X) && canShoot)
         {
+            shotSFX.Play();
             StartCoroutine(ShotDelay());
             shotMain.startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
             shot.Play();
