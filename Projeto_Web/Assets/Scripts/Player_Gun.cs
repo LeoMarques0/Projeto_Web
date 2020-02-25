@@ -8,11 +8,14 @@ public class Player_Gun : MonoBehaviour
 
     public ParticleSystem shot;
 
-    public float shotDelay;
+    public float shotDelay, gunEnergyCost;
 
     ParticleSystem.MainModule shotMain;
 
     bool canShoot = true;
+
+    //Sound Variables
+    public AudioSource shotSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +27,14 @@ public class Player_Gun : MonoBehaviour
 
     public void Shoot()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && canShoot)
+        if (Input.GetKey(KeyCode.X) && canShoot)
         {
+            shotSFX.Play();
             StartCoroutine(ShotDelay());
-            print(transform.eulerAngles.z);
             shotMain.startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
             shot.Play();
 
-            main.energy -= 1;
+            main.energy -= gunEnergyCost;
         }
     }
 
