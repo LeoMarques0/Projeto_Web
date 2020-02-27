@@ -33,6 +33,8 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        main = GetComponent<Player_Main>();
+
         PostProcessVolume volume = Camera.main.GetComponent<PostProcessVolume>();
 
         volume.profile.TryGetSettings(out chromaticAberration);
@@ -93,31 +95,34 @@ public class Player_Movement : MonoBehaviour
 
     public void SlowMotion()
     {
-        if(Input.GetKey(KeyCode.Z))
+        if (!main.paused)
         {
-            Time.timeScale = .5f;
-            Time.fixedDeltaTime = .02f * Time.timeScale;
-
-            if (!onSlowMotion)
+            if (Input.GetKey(KeyCode.Z))
             {
-                StopAllCoroutines();
-                StartCoroutine(SlowMotionEffect(true));
+                Time.timeScale = .5f;
+                Time.fixedDeltaTime = .02f * Time.timeScale;
+
+                if (!onSlowMotion)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(SlowMotionEffect(true));
+                }
+
+                onSlowMotion = true;
             }
-
-            onSlowMotion = true;
-        }
-        else
-        {
-            Time.timeScale = 1;
-            Time.fixedDeltaTime = .02f * Time.timeScale;
-
-            if (onSlowMotion)
+            else
             {
-                StopAllCoroutines();
-                StartCoroutine(SlowMotionEffect(false));
-            }
+                Time.timeScale = 1;
+                Time.fixedDeltaTime = .02f * Time.timeScale;
 
-            onSlowMotion = false;
+                if (onSlowMotion)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(SlowMotionEffect(false));
+                }
+
+                onSlowMotion = false;
+            }
         }
 
         if (onSlowMotion)

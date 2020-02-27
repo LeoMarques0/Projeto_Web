@@ -3,29 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum FuelState
+public enum ShipState
 {
     FUELED,
-    EMPTY
+    EMPTY,
+    PAUSE,
+    DEAD
 }
 
 public class Player_Main : MonoBehaviour
 {
 
-    Player_Gun gun;
-    Player_Movement movement;
-    Player_UI ui;
+    [HideInInspector]
+    public Player_Gun gun;
+    [HideInInspector]
+    public Player_Movement movement;
+    [HideInInspector]
+    public Player_UI ui;
 
-    FuelState fuelState = new FuelState();
+    public ShipState shipState = new ShipState();
 
     public Animator boostAnim;
     public Transform objective, pointer;
 
+    public GameObject explosion;
+
     Vector3 objectivePos;
     float angle;
+    bool dead = false;
     
 
     public float maxEnergy;
+    public float health = 100;
+
+    [HideInInspector]
+    public bool paused;
 
     [HideInInspector]
     public float energy;
@@ -44,9 +56,9 @@ public class Player_Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (fuelState)
+        switch (shipState)
         {
-            case FuelState.FUELED:
+            case ShipState.FUELED:
 
                 gun.Shoot();
 
@@ -54,6 +66,19 @@ public class Player_Main : MonoBehaviour
                 movement.SlowMotion();
 
                 ui.EnergyBar();
+
+                if (health <= 0)
+                    shipState = ShipState.DEAD;
+
+                break;
+
+            case ShipState.DEAD:
+
+                if(!dead)
+                {
+                    StartCoroutine(DeathScene());
+                    dead = true;
+                }
 
                 break;
         }
@@ -69,9 +94,9 @@ public class Player_Main : MonoBehaviour
 
     private void FixedUpdate()
     {
-        switch (fuelState)
+        switch (shipState)
         {
-            case FuelState.FUELED:
+            case ShipState.FUELED:
 
                 movement.Handling();
 
@@ -81,13 +106,13 @@ public class Player_Main : MonoBehaviour
 
     void StateManager()
     {
-        switch (fuelState)
+        switch (shipState)
         {
-            case FuelState.FUELED:
+            case ShipState.FUELED:
 
                 if (energy <= 0)
                 {
-                    fuelState = FuelState.EMPTY;
+                    shipState = ShipState.EMPTY;
                     movement.TurnParticlesOnOff(false);
                     movement.ver = 0;
                     StartCoroutine(movement.SlowMotionEffect(false));
@@ -95,7 +120,22 @@ public class Player_Main : MonoBehaviour
                 }
 
                 break;
+
+            case ShipState.EMPTY:
+                Mute();
+                break;
+
+            case ShipState.PAUSE:
+                Mute();
+                break;
         }
+    }
+
+    void Mute()
+    {
+        gun.shotSFX.Stop();
+        movement.engine.Stop();
+        movement.slowMotion.Stop();
     }
 
     public void AnimationValues()
@@ -109,6 +149,14 @@ public class Player_Main : MonoBehaviour
         angle = Mathf.Atan2(objectivePos.y, objectivePos.x) * Mathf.Rad2Deg;
 
         pointer.rotation = Quaternion.Euler(Vector3.forward * angle);
+    }
+
+    IEnumerator DeathScene()
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        transform.Find("Sprite").gameObject.SetActive(false);
+        yield return new WaitForSeconds(1);
+        ui.GameOver();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

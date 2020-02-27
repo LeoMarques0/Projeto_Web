@@ -9,7 +9,9 @@ public class ButtonCommands : MonoBehaviour
 
     public GameObject[] menus;
 
-    
+    public Player_Main main;
+
+
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -44,6 +46,7 @@ public class ButtonCommands : MonoBehaviour
 
     public void Resume(GameObject menu)
     {
+        main.shipState = ShipState.FUELED;
         menu.SetActive(false);
         Time.timeScale = 1;
     }
