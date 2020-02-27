@@ -27,7 +27,7 @@ public class Player_UI : MonoBehaviour
     public void CanvasButtons()
     {
         shootButton.sprite = Input.GetKey(KeyCode.X) ? shoot[1] : shoot[0];
-        slowMotionButton.sprite = Input.GetKey(KeyCode.Z) ? slowMotion[1] : slowMotion[0];
+        slowMotionButton.sprite = Input.GetKey(KeyCode.Z) ? slowMotion[1] : slowMotion[0];  
     }
 
     public void EnergyBar()
