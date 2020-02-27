@@ -14,13 +14,16 @@ public class Player_Main : MonoBehaviour
 
     Player_Gun gun;
     Player_Movement movement;
+    Player_UI ui;
 
     FuelState fuelState = new FuelState();
 
     public Animator boostAnim;
-    public Slider energyBar;
-    public Transform canvasObj;
-    public GameObject pauseMenu;
+    public Transform objective, pointer;
+
+    Vector3 objectivePos;
+    float angle;
+    
 
     public float maxEnergy;
 
@@ -31,11 +34,11 @@ public class Player_Main : MonoBehaviour
     {
         gun = GetComponent<Player_Gun>();
         movement = GetComponent<Player_Movement>();
+        ui = GetComponent<Player_UI>();
 
         energy = maxEnergy;
 
-        canvasObj.SetParent(null, false);
-
+        objective = GameObject.FindWithTag("Objective").transform;
     }
 
     // Update is called once per frame
@@ -50,14 +53,17 @@ public class Player_Main : MonoBehaviour
                 movement.Updates();
                 movement.SlowMotion();
 
-                EnergyBar();
+                ui.EnergyBar();
 
                 break;
         }
 
         AnimationValues();
         StateManager();
-        Pause();
+        TrackObjective();
+
+        ui.Pause();
+        ui.CanvasButtons();
 
     }
 
@@ -97,18 +103,12 @@ public class Player_Main : MonoBehaviour
         boostAnim.SetInteger("Ver", Mathf.RoundToInt(movement.ver));
     }
 
-    void EnergyBar()
+    public void TrackObjective()
     {
-        energyBar.value = energy / maxEnergy;
-    }
+        objectivePos = objective.position - pointer.position;
+        angle = Mathf.Atan2(objectivePos.y, objectivePos.x) * Mathf.Rad2Deg;
 
-    void Pause()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0;
-        }
+        pointer.rotation = Quaternion.Euler(Vector3.forward * angle);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
