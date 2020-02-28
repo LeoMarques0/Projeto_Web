@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager singleton;
 
     public AudioSource music;
+    public AudioClip[] musicClips;
     public AudioSource[] sounds;
     public float soundVolume = 1;
 
@@ -26,6 +27,9 @@ public class GameManager : MonoBehaviour
         music = GetComponent<AudioSource>();
         sounds = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
 
+        if(singleton == this)
+            MusicChange(SceneManager.GetActiveScene().buildIndex);
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         if (singleton == this)
         {
+            MusicChange(level);
             StartCoroutine(WaitForStart());
         }
     }
@@ -49,12 +54,25 @@ public class GameManager : MonoBehaviour
 
         if (sounds.Length > 1)
         {
-            print("ChangeSound");
             foreach (AudioSource aS in sounds)
             {
                 if (aS != music)
                     aS.volume = soundVolume;
             }
+        }
+    }
+
+    public void MusicChange(int level)
+    {
+        if (level != 0 && music.clip != musicClips[1])
+        {
+            music.clip = musicClips[1];
+            music.Play();
+        }
+        else if (level == 0 && music.clip != musicClips[0])
+        {
+            music.clip = musicClips[0];
+            music.Play();
         }
     }
 }
