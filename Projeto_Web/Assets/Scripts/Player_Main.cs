@@ -23,7 +23,7 @@ public class Player_Main : MonoBehaviour
 
     public ShipState shipState = new ShipState();
 
-    public Animator boostAnim;
+    public Animator anim;
     public Transform objective, pointer;
 
     public GameObject explosion;
@@ -34,7 +34,6 @@ public class Player_Main : MonoBehaviour
     
 
     public float maxEnergy;
-    public float health = 100;
 
     [HideInInspector]
     public bool paused;
@@ -47,6 +46,8 @@ public class Player_Main : MonoBehaviour
         gun = GetComponent<Player_Gun>();
         movement = GetComponent<Player_Movement>();
         ui = GetComponent<Player_UI>();
+
+        anim = GetComponent<Animator>();
 
         energy = maxEnergy;
 
@@ -65,10 +66,7 @@ public class Player_Main : MonoBehaviour
                 movement.Updates();
                 movement.SlowMotion();
 
-                ui.EnergyBar();
-
-                if (health <= 0)
-                    shipState = ShipState.DEAD;
+                ui.EnergyBar();                    
 
                 break;
 
@@ -140,7 +138,7 @@ public class Player_Main : MonoBehaviour
 
     public void AnimationValues()
     {
-        boostAnim.SetInteger("Ver", Mathf.RoundToInt(movement.ver));
+        anim.SetInteger("Ver", Mathf.RoundToInt(movement.ver));
     }
 
     public void TrackObjective()
@@ -154,6 +152,10 @@ public class Player_Main : MonoBehaviour
     IEnumerator DeathScene()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
+
+        movement.TurnParticlesOnOff(false);
+        Mute();
+
         transform.Find("Sprite").gameObject.SetActive(false);
         yield return new WaitForSeconds(1);
         ui.GameOver();
@@ -167,6 +169,11 @@ public class Player_Main : MonoBehaviour
             energy = Mathf.Clamp(energy, 0, 100);
 
             Destroy(collision.gameObject);
+        }
+
+        if(collision.tag == "Enemy")
+        {
+            shipState = ShipState.DEAD;
         }
     }
 }
