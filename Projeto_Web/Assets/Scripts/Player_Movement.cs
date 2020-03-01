@@ -103,10 +103,7 @@ public class Player_Movement : MonoBehaviour
                 Time.fixedDeltaTime = .02f * Time.timeScale;
 
                 if (!onSlowMotion)
-                {
-                    StopAllCoroutines();
-                    StartCoroutine(SlowMotionEffect(true));
-                }
+                    StartSlowMotionEffect(true);
 
                 onSlowMotion = true;
             }
@@ -116,10 +113,7 @@ public class Player_Movement : MonoBehaviour
                 Time.fixedDeltaTime = .02f * Time.timeScale;
 
                 if (onSlowMotion)
-                {
-                    StopAllCoroutines();
-                    StartCoroutine(SlowMotionEffect(false));
-                }
+                    StartSlowMotionEffect(false);
 
                 onSlowMotion = false;
             }
@@ -129,9 +123,14 @@ public class Player_Movement : MonoBehaviour
             main.energy -= slowMoEnergyCost * Time.deltaTime;
     }
 
+    public void StartSlowMotionEffect(bool activate)
+    {
+        StopAllCoroutines();
+        StartCoroutine(SlowMotionEffect(activate));
+    }
+
     public IEnumerator SlowMotionEffect(bool activate)
     {
-
         WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
 
 

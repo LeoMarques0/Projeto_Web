@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Menu\ButtonCommands.cs" />
+    <Compile Include="Assets\Scripts\Menu\SlidersStart.cs" />
     <Compile Include="Assets\Scripts\Player_Gun.cs" />
     <Compile Include="Assets\Scripts\Player_Main.cs" />
     <Compile Include="Assets\Scripts\Player_Movement.cs" />

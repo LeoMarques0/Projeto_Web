@@ -74,6 +74,8 @@ public class Player_Main : MonoBehaviour
 
                 if(!dead)
                 {
+                    if(movement.slowMotion)
+                        movement.StartSlowMotionEffect(false);
                     StartCoroutine(DeathScene());
                     dead = true;
                 }
@@ -113,7 +115,7 @@ public class Player_Main : MonoBehaviour
                     shipState = ShipState.EMPTY;
                     movement.TurnParticlesOnOff(false);
                     movement.ver = 0;
-                    StartCoroutine(movement.SlowMotionEffect(false));
+                    movement.StartSlowMotionEffect(false);
                     energy = 0;
                 }
 
