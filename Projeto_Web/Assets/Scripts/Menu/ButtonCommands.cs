@@ -11,6 +11,13 @@ public class ButtonCommands : MonoBehaviour
 
     public Player_Main main;
 
+    AudioSource audioS;
+
+    private void Start()
+    {
+        audioS = GetComponent<AudioSource>();
+    }
+
 
     public void ChangeScene(string sceneName)
     {
@@ -31,6 +38,12 @@ public class ButtonCommands : MonoBehaviour
     {
         GameManager.singleton.soundVolume = slider.value;
         GameManager.singleton.ChangeSoundVolume();
+    }
+
+    public void PlayButtonSound(AudioClip sound)
+    {
+        audioS.clip = sound;
+        audioS.Play();
     }
 
     void ActivateSelectedMenu(float index)
