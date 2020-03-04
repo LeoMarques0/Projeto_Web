@@ -39,7 +39,6 @@ public class Player_Gun : MonoBehaviour
                 shotMain[i].startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
                 shot[i].Play();
             }
-
             main.energy -= gunEnergyCost;
         }
     }
