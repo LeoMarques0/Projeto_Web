@@ -30,8 +30,8 @@ public class Player_UI : MonoBehaviour
 
     public void CanvasButtons()
     {
-        shootButton.sprite = Input.GetKey(KeyCode.X) ? shoot[1] : shoot[0];
-        slowMotionButton.sprite = Input.GetKey(KeyCode.Z) ? slowMotion[1] : slowMotion[0];  
+        shootButton.sprite = main.controls.Gameplay.SlowMotion.phase == UnityEngine.InputSystem.InputActionPhase.Started ? shoot[1] : shoot[0];
+        slowMotionButton.sprite = main.controls.Gameplay.Shoot.phase == UnityEngine.InputSystem.InputActionPhase.Started ? slowMotion[1] : slowMotion[0];  
     }
 
     public void EnergyBar()

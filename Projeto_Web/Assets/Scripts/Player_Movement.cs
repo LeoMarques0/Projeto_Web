@@ -50,8 +50,8 @@ public class Player_Movement : MonoBehaviour
 
     public void Updates()
     {
-        ver = Input.GetAxisRaw("Vertical");
-        hor = Input.GetAxisRaw("Horizontal");
+        ver = main.controls.Gameplay.Accelerate.ReadValue<float>();
+        hor = main.controls.Gameplay.Horizontal.ReadValue<float>();
 
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -20, 20), Mathf.Clamp(rb.velocity.y, -20, 20));
 
@@ -97,7 +97,7 @@ public class Player_Movement : MonoBehaviour
     {
         if (!main.paused)
         {
-            if (Input.GetKey(KeyCode.Z))
+            if (main.controls.Gameplay.SlowMotion.phase == UnityEngine.InputSystem.InputActionPhase.Started)
             {
                 Time.timeScale = .5f;
                 Time.fixedDeltaTime = .02f * Time.timeScale;
