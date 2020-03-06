@@ -6,11 +6,11 @@ public class Player_Gun : MonoBehaviour
 {
     Player_Main main;
 
-    public ParticleSystem[] shot;
+    public ParticleSystem shot;
 
     public float shotDelay, gunEnergyCost;
 
-    ParticleSystem.MainModule[] shotMain;
+    ParticleSystem.MainModule shotMain;
 
     bool canShoot = true;
 
@@ -22,23 +22,18 @@ public class Player_Gun : MonoBehaviour
     {
         main = GetComponent<Player_Main>();
 
-        shotMain = new ParticleSystem.MainModule[shot.Length];
-
-        for(int i = 0; i < shot.Length; i++)
-            shotMain[i] = shot[i].main;
+        shotMain = shot.main;
     }
 
     public void Shoot()
     {
-        if (main.controls.Gameplay.Shoot.phase == UnityEngine.InputSystem.InputActionPhase.Started && canShoot)
+        if (Input.GetKey(KeyCode.X) && canShoot)
         {
             shotSFX.Play();
             StartCoroutine(ShotDelay());
-            for (int i = 0; i < shot.Length; i++)
-            {
-                shotMain[i].startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
-                shot[i].Play();
-            }
+            shotMain.startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
+            shot.Play();
+
             main.energy -= gunEnergyCost;
         }
     }

@@ -20,8 +20,6 @@ public class Player_Main : MonoBehaviour
     public Player_Movement movement;
     [HideInInspector]
     public Player_UI ui;
-    [HideInInspector]
-    public PlayerControls controls;
 
     public ShipState shipState = new ShipState();
 
@@ -49,18 +47,11 @@ public class Player_Main : MonoBehaviour
         movement = GetComponent<Player_Movement>();
         ui = GetComponent<Player_UI>();
 
-        controls = new PlayerControls();
-
         anim = GetComponent<Animator>();
 
         energy = maxEnergy;
 
         objective = GameObject.FindWithTag("Objective").transform;
-    }
-
-    private void OnEnable()
-    {
-        controls.Enable();
     }
 
     // Update is called once per frame

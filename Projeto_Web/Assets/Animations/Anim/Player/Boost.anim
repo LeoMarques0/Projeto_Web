@@ -34,6 +34,18 @@ AnimationClip:
     - time: 0.2
       value: {fileID: -9155753159611281985, guid: 64f8052d01d745542aef5a92a780f88c,
         type: 3}
+    - time: 0.25
+      value: {fileID: 3221702608932075684, guid: 64f8052d01d745542aef5a92a780f88c,
+        type: 3}
+    - time: 0.3
+      value: {fileID: -3781078175276960508, guid: 64f8052d01d745542aef5a92a780f88c,
+        type: 3}
+    - time: 0.35
+      value: {fileID: 2116389885727086835, guid: 64f8052d01d745542aef5a92a780f88c,
+        type: 3}
+    - time: 0.4
+      value: {fileID: 3687427860821705537, guid: 64f8052d01d745542aef5a92a780f88c,
+        type: 3}
     attribute: m_Sprite
     path: Sprite/Spaceship.Boost (1)_0
     classID: 212
@@ -58,12 +70,16 @@ AnimationClip:
     - {fileID: -3781078175276960508, guid: 64f8052d01d745542aef5a92a780f88c, type: 3}
     - {fileID: 3221702608932075684, guid: 64f8052d01d745542aef5a92a780f88c, type: 3}
     - {fileID: -9155753159611281985, guid: 64f8052d01d745542aef5a92a780f88c, type: 3}
+    - {fileID: 3221702608932075684, guid: 64f8052d01d745542aef5a92a780f88c, type: 3}
+    - {fileID: -3781078175276960508, guid: 64f8052d01d745542aef5a92a780f88c, type: 3}
+    - {fileID: 2116389885727086835, guid: 64f8052d01d745542aef5a92a780f88c, type: 3}
+    - {fileID: 3687427860821705537, guid: 64f8052d01d745542aef5a92a780f88c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.21666667
+    m_StopTime: 0.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
