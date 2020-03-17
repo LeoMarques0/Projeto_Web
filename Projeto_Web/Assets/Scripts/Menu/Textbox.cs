@@ -33,7 +33,7 @@ public class Textbox : MonoBehaviour
             StartCoroutine(CompleteText(dialogues[index]));
         }
 
-        if(Input.GetKeyDown(KeyCode.KeypadEnter))
+        if(Input.GetKeyDown(KeyCode.X))
         {
             if (index < dialogues.Count)
             {
@@ -66,6 +66,7 @@ public class Textbox : MonoBehaviour
 
             yield return new WaitForSeconds(.1f);
         }
+        writing = false;
         index++;
     }
 }

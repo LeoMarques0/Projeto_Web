@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 6854ff95c53ce3e4e8a717f7b174ba93
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 787852128848100916
+    second: SpaceShipTravel (1)_0
+  - first:
+      213: -6913845683902447014
+    second: SpaceShipTravel (1)_1
+  - first:
+      213: 1793689554520708861
+    second: SpaceShipTravel (1)_2
+  - first:
+      213: 7269316209733796060
+    second: SpaceShipTravel (1)_3
+  - first:
+      213: -8847635265325191103
+    second: SpaceShipTravel (1)_4
+  - first:
+      213: 7596360878565746680
+    second: SpaceShipTravel (1)_5
+  - first:
+      213: 7309504433850556017
+    second: SpaceShipTravel (1)_6
+  - first:
+      213: 2261148007254358715
+    second: SpaceShipTravel (1)_7
+  - first:
+      213: -545419304169561792
+    second: SpaceShipTravel (1)_8
+  - first:
+      213: -7689789139648503545
+    second: SpaceShipTravel (1)_9
+  - first:
+      213: -4736230699317056307
+    second: SpaceShipTravel (1)_10
+  - first:
+      213: -5612021563253064029
+    second: SpaceShipTravel (1)_11
+  - first:
+      213: -5062640278938219475
+    second: SpaceShipTravel (1)_12
+  - first:
+      213: 592346483902677396
+    second: SpaceShipTravel (1)_13
+  - first:
+      213: 5123655757362101747
+    second: SpaceShipTravel (1)_14
+  - first:
+      213: -6329644550736004243
+    second: SpaceShipTravel (1)_15
+  - first:
+      213: -5704483330732381140
+    second: SpaceShipTravel (1)_16
+  - first:
+      213: 6788404260897433440
+    second: SpaceShipTravel (1)_17
+  - first:
+      213: 3095846749590124532
+    second: SpaceShipTravel (1)_18
+  - first:
+      213: -1011317471973136244
+    second: SpaceShipTravel (1)_19
+  - first:
+      213: 5430036238126719400
+    second: SpaceShipTravel (1)_20
+  - first:
+      213: 115783329264957375
+    second: SpaceShipTravel (1)_21
+  - first:
+      213: 502829554353251508
+    second: SpaceShipTravel (1)_22
+  - first:
+      213: -1543012378845336826
+    second: SpaceShipTravel (1)_23
+  - first:
+      213: -7368666170154916885
+    second: SpaceShipTravel (1)_24
+  - first:
+      213: 2357941013691383787
+    second: SpaceShipTravel (1)_0
+  - first:
+      213: -2279556831374085329
+    second: SpaceShipTravel (1)_1
+  - first:
+      213: 4443457508728555348
+    second: SpaceShipTravel (1)_2
+  - first:
+      213: -5737800062046094881
+    second: SpaceShipTravel (1)_3
+  - first:
+      213: -8350628437950234283
+    second: SpaceShipTravel (1)_4
+  - first:
+      213: -6749781782258896863
+    second: SpaceShipTravel (1)_5
+  - first:
+      213: -4489902049615579168
+    second: SpaceShipTravel (1)_25
+  - first:
+      213: 8850818235792914105
+    second: SpaceShipTravel (1)_6
+  - first:
+      213: -5477605426727376029
+    second: SpaceShipTravel (1)_7
+  - first:
+      213: 7535645525829280741
+    second: SpaceShipTravel (1)_8
+  - first:
+      213: 751136739262814261
+    second: SpaceShipTravel (1)_9
+  - first:
+      213: 4102230922720267903
+    second: SpaceShipTravel (1)_10
+  - first:
+      213: 589441782177500711
+    second: SpaceShipTravel (1)_11
+  - first:
+      213: 9206907629396547022
+    second: SpaceShipTravel (1)_12
+  - first:
+      213: 2224727097195677348
+    second: SpaceShipTravel (1)_13
+  - first:
+      213: -1911960455919345421
+    second: SpaceShipTravel (1)_14
+  - first:
+      213: 7804546804652518457
+    second: SpaceShipTravel (1)_15
+  - first:
+      213: -1262701978082551874
+    second: SpaceShipTravel (1)_16
+  - first:
+      213: 5926400300801785815
+    second: SpaceShipTravel (1)_17
+  - first:
+      213: 4117336817831977414
+    second: SpaceShipTravel (1)_18
+  - first:
+      213: -793971313979214462
+    second: SpaceShipTravel (1)_19
+  - first:
+      213: 6378655252650454845
+    second: SpaceShipTravel (1)_20
+  - first:
+      213: 5748321186077923897
+    second: SpaceShipTravel (1)_21
+  - first:
+      213: 4577319460729272983
+    second: SpaceShipTravel (1)_22
+  - first:
+      213: -1894575259502704533
+    second: SpaceShipTravel (1)_23
+  - first:
+      213: -8173666099773780409
+    second: SpaceShipTravel (1)_24
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 492
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef366aebd619b020800000000000000
+      internalID: 2357941013691383787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 471
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23f1a4b3236d50e0800000000000000
+      internalID: -2279556831374085329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 451
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457ce4ecf055aad30800000000000000
+      internalID: 4443457508728555348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 431
+        width: 4
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd937856e3d3f50b0800000000000000
+      internalID: -5737800062046094881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 411
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55183b0edab9c1c80800000000000000
+      internalID: -8350628437950234283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 391
+        width: 6
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1203e0d1b35f352a0800000000000000
+      internalID: -6749781782258896863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 371
+        width: 7
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b67cf3ba4c64da70800000000000000
+      internalID: 8850818235792914105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 351
+        width: 8
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ba920d2e2abf3b0800000000000000
+      internalID: -5477605426727376029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 331
+        width: 9
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3e0502eadf39860800000000000000
+      internalID: 7535645525829280741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 311
+        width: 10
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538518972e29c6a00800000000000000
+      internalID: 751136739262814261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 291
+        width: 11
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e4d572a4d0ee830800000000000000
+      internalID: 4102230922720267903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 271
+        width: 12
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e867a8d2e1e2800800000000000000
+      internalID: 589441782177500711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 251
+        width: 13
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5d30a65b185cf70800000000000000
+      internalID: 9206907629396547022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 14
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6c88ef181dfde10800000000000000
+      internalID: 2224727097195677348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211
+        width: 15
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f06558681a5775e0800000000000000
+      internalID: -1911960455919345421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c2934f7f15f4c60800000000000000
+      internalID: 7804546804652518457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 167
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7d433bd3bf97ee0800000000000000
+      internalID: -1262701978082551874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dffe069cadce3250800000000000000
+      internalID: 5926400300801785815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1238f6508b32930800000000000000
+      internalID: 4117336817831977414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 107
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2853b6ceb4f3bf4f0800000000000000
+      internalID: -793971313979214462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fe8ee1829858850800000000000000
+      internalID: 6378655252650454845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ad60fa9a326cf40800000000000000
+      internalID: 5748321186077923897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 48
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a30404cc7e58f30800000000000000
+      internalID: 4577319460729272983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_23
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 28
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b680911e6dd15b5e0800000000000000
+      internalID: -1894575259502704533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShipTravel (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ec45afcfd419e80800000000000000
+      internalID: -8173666099773780409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

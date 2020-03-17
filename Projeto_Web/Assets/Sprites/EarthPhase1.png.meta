@@ -1,0 +1,1147 @@
+fileFormatVersion: 2
+guid: 34dbacd5d5fb6114397bb88e3276b630
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8168151259516346051
+    second: EarthPhase1_0
+  - first:
+      213: 7277134663272176695
+    second: EarthPhase1_1
+  - first:
+      213: -7025505254238972716
+    second: EarthPhase1_2
+  - first:
+      213: 7013469627539549462
+    second: EarthPhase1_3
+  - first:
+      213: 6575741202933165246
+    second: EarthPhase1_4
+  - first:
+      213: -6091222994691352030
+    second: EarthPhase1_5
+  - first:
+      213: 9217205756056192497
+    second: EarthPhase1_6
+  - first:
+      213: -7170298333025140264
+    second: EarthPhase1_7
+  - first:
+      213: 5906533723612291420
+    second: EarthPhase1_8
+  - first:
+      213: -2933180630283716502
+    second: EarthPhase1_9
+  - first:
+      213: 316563696396046998
+    second: EarthPhase1_10
+  - first:
+      213: -8508607853292128764
+    second: EarthPhase1_11
+  - first:
+      213: 1036388616430076024
+    second: EarthPhase1_12
+  - first:
+      213: -156120112840199613
+    second: EarthPhase1_13
+  - first:
+      213: -1015941747988011316
+    second: EarthPhase1_14
+  - first:
+      213: 5267560595267959800
+    second: EarthPhase1_15
+  - first:
+      213: -5921810334040915980
+    second: EarthPhase1_16
+  - first:
+      213: -3375377886679624256
+    second: EarthPhase1_17
+  - first:
+      213: 8320718560195837854
+    second: EarthPhase1_18
+  - first:
+      213: 5221492338438980797
+    second: EarthPhase1_19
+  - first:
+      213: -8189896633651762008
+    second: EarthPhase1_20
+  - first:
+      213: -2671411236480858681
+    second: EarthPhase1_21
+  - first:
+      213: 20172140256014408
+    second: EarthPhase1_22
+  - first:
+      213: 8807972735798929985
+    second: EarthPhase1_23
+  - first:
+      213: -5568324064192951943
+    second: EarthPhase1_24
+  - first:
+      213: -6152549662013268117
+    second: EarthPhase1_25
+  - first:
+      213: -5039081531591457876
+    second: EarthPhase1_26
+  - first:
+      213: -4542914864414802160
+    second: EarthPhase1_27
+  - first:
+      213: 3376275839121201293
+    second: EarthPhase1_28
+  - first:
+      213: 7201252331425055826
+    second: EarthPhase1_29
+  - first:
+      213: -4311562295092788487
+    second: EarthPhase1_30
+  - first:
+      213: -3265339814565803472
+    second: EarthPhase1_31
+  - first:
+      213: -8344159935601454219
+    second: EarthPhase1_32
+  - first:
+      213: -8990950419637145586
+    second: EarthPhase1_33
+  - first:
+      213: 5478962448253780053
+    second: EarthPhase1_34
+  - first:
+      213: 6647509488540778251
+    second: EarthPhase1_35
+  - first:
+      213: 8034317336531202992
+    second: EarthPhase1_36
+  - first:
+      213: -4550303859375713700
+    second: EarthPhase1_37
+  - first:
+      213: 7816794118528014421
+    second: EarthPhase1_38
+  - first:
+      213: -2314709274907875831
+    second: EarthPhase1_39
+  - first:
+      213: 6991525063323927985
+    second: EarthPhase1_40
+  - first:
+      213: 4210914321498758104
+    second: EarthPhase1_41
+  - first:
+      213: -4111977484851480859
+    second: EarthPhase1_42
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EarthPhase1_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 194
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce91273b4a1b5170800000000000000
+      internalID: 8168151259516346051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 194
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c150b9b639df460800000000000000
+      internalID: 7277134663272176695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 194
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d41279a134608e90800000000000000
+      internalID: -7025505254238972716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 194
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d6c70a779d45160800000000000000
+      internalID: 7013469627539549462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 194
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc2bb7c8c9b14b50800000000000000
+      internalID: 6575741202933165246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 194
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a1bb185f0a77ba0800000000000000
+      internalID: -6091222994691352030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 194
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f54a6fdcc71aef70800000000000000
+      internalID: 9217205756056192497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 162
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1067ee7abfd7c90800000000000000
+      internalID: -7170298333025140264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 162
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51a6c1a02938f150800000000000000
+      internalID: 5906533723612291420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 162
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68f1e5e1cf3b47d0800000000000000
+      internalID: -2933180630283716502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 162
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69298703109a46400800000000000000
+      internalID: 316563696396046998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 162
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4067c6bec3a5be980800000000000000
+      internalID: -8508607853292128764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_12
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 162
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870c293a4fdf16e00800000000000000
+      internalID: 1036388616430076024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 162
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342bdd3a59955ddf0800000000000000
+      internalID: -156120112840199613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc66fa6ec56a6e1f0800000000000000
+      internalID: -1015941747988011316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbbac1e3722a1940800000000000000
+      internalID: 5267560595267959800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_16
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fff04450e081dda0800000000000000
+      internalID: -5921810334040915980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_17
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c590c112bf3821d0800000000000000
+      internalID: -3375377886679624256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_18
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ff8780271297370800000000000000
+      internalID: 8320718560195837854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_19
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4441efd97767840800000000000000
+      internalID: 5221492338438980797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_20
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ace4045764a75e80800000000000000
+      internalID: -8189896633651762008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_21
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 98
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5429852ad3dead0800000000000000
+      internalID: -2671411236480858681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_22
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 98
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840b156647aa74000800000000000000
+      internalID: 20172140256014408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_23
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 98
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aee9c59843c3a70800000000000000
+      internalID: 8807972735798929985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_24
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 98
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979058f04c659b2b0800000000000000
+      internalID: -5568324064192951943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_25
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 98
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fdfb41ea0cd9aa0800000000000000
+      internalID: -6152549662013268117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_26
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 98
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca382439b06911ab0800000000000000
+      internalID: -5039081531591457876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_27
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 98
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fb6bd000354f0c0800000000000000
+      internalID: -4542914864414802160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d889d86ccf0fade20800000000000000
+      internalID: 3376275839121201293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_29
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2544b8077dcffe360800000000000000
+      internalID: 7201252331425055826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_30
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2c60eafe04a24c0800000000000000
+      internalID: -4311562295092788487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_31
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a8dd93dbe2fa2d0800000000000000
+      internalID: -3265339814565803472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_32
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573dd617fb6933c80800000000000000
+      internalID: -8344159935601454219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_33
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00f06cba3ab93380800000000000000
+      internalID: -8990950419637145586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_34
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 66
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5500fd1615f290c40800000000000000
+      internalID: 5478962448253780053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_35
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 34
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ff289e8a2b04c50800000000000000
+      internalID: 6647509488540778251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_36
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 34
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b374b8cc01af7f60800000000000000
+      internalID: 8034317336531202992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_37
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 34
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5252d99fb21ad0c0800000000000000
+      internalID: -4550303859375713700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_38
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 34
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558993de5d4da7c60800000000000000
+      internalID: 7816794118528014421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_39
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 34
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90660d6ad2080efd0800000000000000
+      internalID: -2314709274907875831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_40
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 34
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5c9ad9003e60160800000000000000
+      internalID: 6991525063323927985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_41
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 34
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbd988d34c207a30800000000000000
+      internalID: 4210914321498758104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EarthPhase1_42
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6f50383425fe6c0800000000000000
+      internalID: -4111977484851480859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
