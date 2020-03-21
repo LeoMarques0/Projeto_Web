@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Textbox : MonoBehaviour
 {
@@ -47,8 +48,8 @@ public class Textbox : MonoBehaviour
                 else
                     continueText = true;
             }
-            else if(hasAnimationNext)
-                anim.Play(animationName);
+            else if (hasAnimationNext)
+                SceneManager.LoadScene("SampleScene");
         }
     }
 

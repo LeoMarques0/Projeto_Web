@@ -281,7 +281,6 @@ GameObject:
   - component: {fileID: 521965659}
   - component: {fileID: 521965661}
   - component: {fileID: 521965660}
-  - component: {fileID: 521965662}
   m_Layer: 5
   m_Name: Textbox
   m_TagString: Untagged
@@ -345,23 +344,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521965658}
   m_CullTransparentMesh: 0
---- !u!114 &521965662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521965658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa43cb8d07e81f34dad5958e0d8efa1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 1073366881}
-  hasAnimationNext: 0
-  anim: {fileID: 0}
-  animationName: 
-  dialogues: []
 --- !u!1 &1073366879
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 1073366881}
-  hasAnimationNext: 0
+  hasAnimationNext: 1
   anim: {fileID: 0}
   animationName: 
   dialogues:
@@ -5465,10 +5447,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6827360aff4a60e47a5e73bd0a7c4a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changingText: {fileID: 1073366881}
-  changingText2: {fileID: 1073366881}
-  changingText3: {fileID: 1073366881}
-  changingText4: {fileID: 0}
-  changingText5: {fileID: 0}
-  changingText6: {fileID: 0}
-  changingText7: {fileID: 0}
