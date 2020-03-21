@@ -172,6 +172,11 @@ public class Player_Main : MonoBehaviour
         ui.GameOver();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        shipState = ShipState.DEAD;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fuel")
@@ -186,5 +191,11 @@ public class Player_Main : MonoBehaviour
         {
             shipState = ShipState.DEAD;
         }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if(other != gun.shot[0].gameObject && other.gameObject != gun.shot[1].gameObject)
+            shipState = ShipState.DEAD;
     }
 }

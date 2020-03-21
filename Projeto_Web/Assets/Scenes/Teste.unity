@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951662424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -214,12 +214,12 @@ PrefabInstance:
     - target: {fileID: 5301466961817035119, guid: deda581556aa75746b213cc1348fa930,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5301466961817035119, guid: deda581556aa75746b213cc1348fa930,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5301466963174085761, guid: deda581556aa75746b213cc1348fa930,
         type: 3}
@@ -229,7 +229,7 @@ PrefabInstance:
     - target: {fileID: 5301466963174085761, guid: deda581556aa75746b213cc1348fa930,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301466963174085767, guid: deda581556aa75746b213cc1348fa930,
         type: 3}
@@ -355,52 +355,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Assault
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1620194971, guid: 95261e9c3f231b648aea63489b7c5a34, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95261e9c3f231b648aea63489b7c5a34, type: 3}
---- !u!1 &1620194970 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8933530849457393802, guid: 95261e9c3f231b648aea63489b7c5a34,
-    type: 3}
-  m_PrefabInstance: {fileID: 1620194969}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1620194971 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1374343227, guid: 95261e9c3f231b648aea63489b7c5a34,
-    type: 3}
-  m_PrefabInstance: {fileID: 1620194969}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1620194972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620194970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36cd56ec1a72c1d4aa1675764efdcc5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spd: 2000
-  handling: 1
-  radarRadius: 10
-  areaRadius: 10
-  speedDirection: {fileID: 1620194971}
-  mapArea: {fileID: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  state: 1
-  patrolState: 1
-  patrolMaxSpd: 5
-  mapCollider:
-    serializedVersion: 2
-    m_Bits: 1
-  waypoints: []
-  minDistanceToPlayer: 5
-  rangeToFire: 10
-  pursuitMaxSpd: 19
-  spdSubtractor: 1
-  shotDelay: 5
-  shot: []

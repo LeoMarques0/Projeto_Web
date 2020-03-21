@@ -21,10 +21,12 @@ public class Enemy_Base : MonoBehaviour
 {
 
     public float spd;
-
     public float handling;
     public float radarRadius;
     public float areaRadius;
+    public bool doingBehavior;
+    public bool hasGuns;
+    public bool areMissiles;
     public Transform speedDirection;
     public PolygonCollider2D mapArea;
 
@@ -34,6 +36,7 @@ public class Enemy_Base : MonoBehaviour
     public PATROL_STATE patrolState = new PATROL_STATE();
 
     Rigidbody2D rb;
+    Animator anim;
 
     Transform target;
 
@@ -80,6 +83,9 @@ public class Enemy_Base : MonoBehaviour
     public float shotDelay;
     public ParticleSystem[] shot;
 
+    public GameObject missile;
+    public Transform[] missiles;
+
     bool canShoot = true;
     ParticleSystem.MainModule[] shotMain;
 
@@ -87,6 +93,8 @@ public class Enemy_Base : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
         startPos = transform.position;
 
         waypointsParent = transform.Find("Waypoints");
@@ -140,7 +148,15 @@ public class Enemy_Base : MonoBehaviour
                 Pursuit();
 
                 break;
+
+            case ENEMY_STATE.DYING:
+
+                Dying();
+
+                break;
         }
+
+        AnimationState();
     }
 
     private void FixedUpdate()
@@ -169,11 +185,11 @@ public class Enemy_Base : MonoBehaviour
     {
         SearchForTarget();
 
-        if (target != null)
-        {
-            targetRb = target.GetComponent<Rigidbody2D>();
-            state = ENEMY_STATE.PURSUIT;
-        }
+        if (rb.velocity.magnitude > 0)
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, Time.deltaTime);
+
+        if(!doingBehavior)
+            StartCoroutine(ChangeState());
     }
 
     void Patrol()
@@ -216,7 +232,11 @@ public class Enemy_Base : MonoBehaviour
                 break;
         }
 
+        SearchForTarget();
         transform.rotation = speedDirection.rotation;
+
+        if (!doingBehavior)
+            StartCoroutine(ChangeState());
 
     }
 
@@ -247,7 +267,10 @@ public class Enemy_Base : MonoBehaviour
             targetAbsVelocity = new Vector2(Mathf.Abs(targetRb.velocity.x), Mathf.Abs(targetRb.velocity.y));
             absPlayerDir = new Vector2(Mathf.Abs(playerDir.x), Mathf.Abs(playerDir.y));
 
-            currentMaxSpd = targetAbsVelocity - absPlayerDir * (spdSubtractor * ((targetDis / rangeToFire) - (1 - (targetDis / rangeToFire))));
+            if (spdSubtractor > 0)
+                currentMaxSpd = targetAbsVelocity - absPlayerDir * (spdSubtractor * ((targetDis / rangeToFire) - (1 - (targetDis / rangeToFire))));
+            else
+                currentMaxSpd = targetAbsVelocity - absPlayerDir;
 
             if (currentMaxSpd.x < 0.1f && currentMaxSpd.y < 0.1f)
                 currentMaxSpd = Vector2.zero;
@@ -261,48 +284,47 @@ public class Enemy_Base : MonoBehaviour
         }
     }
 
+    void Dying()
+    {
+        StopAllCoroutines();
+    }
+
     void FixedFollowTarget()
     {
-        targetDir = (targetPos - transform.position).normalized;
+        if (state != ENEMY_STATE.PURSUIT)
+            targetDir = (targetPos - transform.position).normalized;
+        else
+            targetDir = (target.position - transform.position).normalized;
+
         velocityDiff = 0;
 
-        velocityDiff = Vector2.SignedAngle(rb.velocity.normalized, targetDir);
+        if(rb.velocity.magnitude != 0)
+            velocityDiff = Vector2.SignedAngle(rb.velocity.normalized, targetDir);
 
         if (state != ENEMY_STATE.PURSUIT && ((velocityDiff > 10 && velocityDiff < 100) || velocityDiff < -10 && velocityDiff > -100))
-            LookAt2D(targetPos, transform.position, velocityDiff * (rb.velocity.magnitude / patrolMaxSpd));
+            speedDirection.rotation = Utility.LookAt2D(speedDirection.rotation, handling, targetPos, transform.position, velocityDiff * (rb.velocity.magnitude / patrolMaxSpd));
         else if(state == ENEMY_STATE.PURSUIT)
-            LookAt2D(target.position, transform.position);
+            speedDirection.rotation = Utility.LookAt2D(speedDirection.rotation, target.position, transform.position);
         else
-            LookAt2D(targetPos, transform.position);
+            speedDirection.rotation = Utility.LookAt2D(speedDirection.rotation, handling, targetPos, transform.position);
 
         if (state != ENEMY_STATE.PURSUIT)
             rb.AddForce(spd * speedDirection.up * Time.deltaTime);
         else if (currentMaxSpd != Vector2.zero)
-            rb.velocity = Vector2.Lerp(rb.velocity, speedDirection.up * currentMaxSpd, currentMaxSpd.magnitude * Time.deltaTime);
+            rb.velocity = Vector2.Lerp(rb.velocity, speedDirection.up * currentMaxSpd, handling * Time.deltaTime);
     }
 
     void SearchForTarget()
     {
         if(Physics2D.OverlapCircle(transform.position, radarRadius, playerLayer))
             target = Physics2D.OverlapCircle(transform.position, radarRadius, playerLayer).transform;
-    }
 
-    void LookAt2D(Vector2 targetPos, Vector2 currentPos, float offset)
-    {
-        Vector3 diff = targetPos - currentPos;
-        diff.Normalize();
-
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        speedDirection.rotation = Quaternion.Lerp(speedDirection.rotation, Quaternion.Euler(0f, 0f, rot_z - 90 + offset), handling * Time.deltaTime);
-    }
-
-    void LookAt2D(Vector2 targetPos, Vector2 currentPos)
-    {
-        Vector3 diff = targetPos - currentPos;
-        diff.Normalize();
-
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        speedDirection.rotation = Quaternion.Lerp(speedDirection.rotation, Quaternion.Euler(0f, 0f, rot_z - 90), handling * Time.deltaTime);
+        if (target != null)
+        {
+            StopAllCoroutines();
+            targetRb = target.GetComponent<Rigidbody2D>();
+            state = ENEMY_STATE.PURSUIT;
+        }
     }
 
     void GetMapLimits()
@@ -334,13 +356,75 @@ public class Enemy_Base : MonoBehaviour
         
         yield return new WaitForSeconds(shotDelay);
 
-        for (int i = 0; i < shot.Length; i++)
+        if (!areMissiles)
         {
-            shotMain[i].startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
-            shot[i].Play();
+            for (int i = 0; i < shot.Length; i++)
+            {
+                shotMain[i].startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
+                shot[i].Play();
+            }
+        }
+        else
+        {
+            for (int i = 0; i < missiles.Length; i++)
+            {
+                Missile shotMissile = Instantiate(missile, missiles[i].position, missiles[i].rotation).GetComponent<Missile>();
+                shotMissile.target = target;
+                shotMissile.parent = transform;
+                yield return new WaitForSeconds(1f);
+            }
         }
 
         canShoot = true;
+    }
+
+    IEnumerator ChangeState()
+    {
+        doingBehavior = true;
+
+        switch (state)
+        {
+            case ENEMY_STATE.IDLE:
+
+                yield return new WaitForSeconds(5f);
+                state = ENEMY_STATE.PATROL;
+
+                break;
+            case ENEMY_STATE.PATROL:
+
+                yield return new WaitForSeconds(15f);
+                state = ENEMY_STATE.IDLE;
+
+                break;
+        }
+
+        doingBehavior = false;
+    }
+
+    void AnimationState()
+    {
+        anim.SetInteger("State", (int)state);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(collision.gameObject.name);
+        state = ENEMY_STATE.DYING;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print(collision.name);
+        state = ENEMY_STATE.DYING;
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if (!hasGuns || (other != shot[0].gameObject && other != shot[1].gameObject))
+        {
+            print(other.name);
+            state = ENEMY_STATE.DYING;
+        }
     }
 
     private void OnDrawGizmos()
