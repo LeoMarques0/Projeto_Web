@@ -4834,7 +4834,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 26.855396
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -9775,7 +9775,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 26.855396
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10226,13 +10226,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cd56ec1a72c1d4aa1675764efdcc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2000
+  spd: 3000
   handling: 1
-  radarRadius: 15
-  areaRadius: 10
+  radarRadius: 30
+  areaRadius: 0
   doingBehavior: 0
   hasGuns: 1
-  areMissiles: 1
+  areMissiles: 0
   speedDirection: {fileID: 1374343227}
   mapArea: {fileID: 0}
   playerLayer:
@@ -10240,7 +10240,7 @@ MonoBehaviour:
     m_Bits: 512
   state: 0
   patrolState: 1
-  patrolMaxSpd: 5
+  patrolMaxSpd: 2
   mapCollider:
     serializedVersion: 2
     m_Bits: 1
@@ -10266,11 +10266,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Explosion
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207121259632353739, guid: 83e188ad8787dd9409ec82d10885cfcc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7207121259632353750, guid: 83e188ad8787dd9409ec82d10885cfcc,
         type: 3}
