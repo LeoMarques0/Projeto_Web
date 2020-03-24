@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5234911563395709575}
   m_Layer: 0
   m_Name: Enemy_Kamikaze
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,9 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cd56ec1a72c1d4aa1675764efdcc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2000
+  spd: 4000
   handling: 2
-  radarRadius: 15
+  radarRadius: 30
   areaRadius: 10
   doingBehavior: 0
   hasGuns: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Bits: 512
   state: 0
   patrolState: 1
-  patrolMaxSpd: 5
+  patrolMaxSpd: 1
   mapCollider:
     serializedVersion: 2
     m_Bits: 1
