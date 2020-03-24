@@ -420,7 +420,7 @@ public class Enemy_Base : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (!hasGuns || (other != shot[0].gameObject && other != shot[1].gameObject))
+        if (!hasGuns || areMissiles || (other != shot[0].gameObject && other != shot[1].gameObject))
         {
             print(other.name);
             state = ENEMY_STATE.DYING;

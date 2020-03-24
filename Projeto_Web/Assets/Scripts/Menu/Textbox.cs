@@ -19,6 +19,7 @@ public class Textbox : MonoBehaviour
 
     int index = 0;
     bool writing = false, continueText = true;
+    bool startedAnimation= false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,12 @@ public class Textbox : MonoBehaviour
                 else
                     continueText = true;
             }
-            else if (hasAnimationNext)
-                SceneManager.LoadScene("SampleScene");
+            else if (hasAnimationNext && !startedAnimation)
+            {
+                startedAnimation = true;
+                anim.Play(animationName);
+            }
+                //SceneManager.LoadScene("Fase1");
         }
     }
 
