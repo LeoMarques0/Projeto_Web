@@ -37,8 +37,12 @@ public class Enemy_Base : MonoBehaviour
 
     Rigidbody2D rb;
     Animator anim;
+    AudioSource audioS;
 
     Transform target;
+
+    public ParticleSystem[] smokes;
+    ParticleSystem.EmissionModule[] smokesEmission;
 
     Vector3 startPos;
     Vector3 targetPos;
@@ -80,27 +84,31 @@ public class Enemy_Base : MonoBehaviour
 
     //Pursuit//
 
-    public float shotDelay;
-    public ParticleSystem[] shot;
+    public float shotDelay, betweenShotDelay;
 
-    public GameObject missile;
-    public Transform[] missiles;
+    public GameObject weapon;
+
+    public Transform[] guns;
 
     bool canShoot = true;
-    ParticleSystem.MainModule[] shotMain;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioS = GetComponent<AudioSource>();
 
         startPos = transform.position;
 
         waypointsParent = transform.Find("Waypoints");
         speedDirection.parent = null;
 
-        switch(patrolState)
+        smokesEmission = new ParticleSystem.EmissionModule[smokes.Length];
+        for (int x = 0; x < smokes.Length; x++)
+            smokesEmission[x] = smokes[x].emission;
+
+        switch (patrolState)
         {
             case PATROL_STATE.AREA:
 
@@ -120,10 +128,6 @@ public class Enemy_Base : MonoBehaviour
 
                 break;
         }
-
-        shotMain = new ParticleSystem.MainModule[shot.Length];
-        for (int i = 0; i < shot.Length; i++)
-            shotMain[i] = shot[i].main;
     }
 
     // Update is called once per frame
@@ -157,6 +161,12 @@ public class Enemy_Base : MonoBehaviour
         }
 
         AnimationState();
+        AudioManager();
+
+        if (rb.velocity.magnitude > 1)
+            TurnParticlesOnOff(true);
+        else
+            TurnParticlesOnOff(false);
     }
 
     private void FixedUpdate()
@@ -287,6 +297,8 @@ public class Enemy_Base : MonoBehaviour
     void Dying()
     {
         StopAllCoroutines();
+        rb.velocity = Vector2.zero;
+        audioS.Stop();
     }
 
     void FixedFollowTarget()
@@ -312,6 +324,14 @@ public class Enemy_Base : MonoBehaviour
             rb.AddForce(spd * speedDirection.up * Time.deltaTime);
         else if (currentMaxSpd != Vector2.zero)
             rb.velocity = Vector2.Lerp(rb.velocity, speedDirection.up * currentMaxSpd, handling * Time.deltaTime);
+    }
+
+    void AudioManager()
+    {
+        if (rb.velocity.magnitude > 1 && !audioS.isPlaying)
+            audioS.Play();
+        else if (rb.velocity.magnitude < 1 && audioS.isPlaying)
+            audioS.Stop();
     }
 
     void SearchForTarget()
@@ -358,20 +378,21 @@ public class Enemy_Base : MonoBehaviour
 
         if (!areMissiles)
         {
-            for (int i = 0; i < shot.Length; i++)
+            for (int i = 0; i < guns.Length; i++)
             {
-                shotMain[i].startRotationZ = -transform.eulerAngles.z * Mathf.Deg2Rad;
-                shot[i].Play();
+                Laser shotLaser = Instantiate(weapon, guns[i].position, guns[i].rotation).GetComponent<Laser>();
+                shotLaser.shotDir = guns[i].up;
+                shotLaser.parent = transform;
             }
         }
         else
         {
-            for (int i = 0; i < missiles.Length; i++)
+            for (int i = 0; i < guns.Length; i++)
             {
-                Missile shotMissile = Instantiate(missile, missiles[i].position, missiles[i].rotation).GetComponent<Missile>();
+                Missile shotMissile = Instantiate(weapon, guns[i].position, guns[i].rotation).GetComponent<Missile>();
                 shotMissile.target = target;
                 shotMissile.parent = transform;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(betweenShotDelay);
             }
         }
 
@@ -401,6 +422,20 @@ public class Enemy_Base : MonoBehaviour
         doingBehavior = false;
     }
 
+    public void TurnParticlesOnOff(bool isOn)
+    {
+        if (isOn)
+        {
+            for (int x = 0; x < smokesEmission.Length; x++)
+                smokesEmission[x].rateOverTime = 200;
+        }
+        else
+        {
+            for (int x = 0; x < smokesEmission.Length; x++)
+                smokesEmission[x].rateOverTime = 0;
+        }
+    }
+
     void AnimationState()
     {
         anim.SetInteger("State", (int)state);
@@ -414,17 +449,17 @@ public class Enemy_Base : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.name);
-        state = ENEMY_STATE.DYING;
+        if (!hasGuns || collision.GetComponent<Weapon>()?.parent != transform)
+        {
+            print(collision.name);
+            state = ENEMY_STATE.DYING;
+        }
     }
 
     private void OnParticleCollision(GameObject other)
     {
-        if (!hasGuns || areMissiles || (other != shot[0].gameObject && other != shot[1].gameObject))
-        {
-            print(other.name);
-            state = ENEMY_STATE.DYING;
-        }
+        print(other.name);
+        state = ENEMY_STATE.DYING;
     }
 
     private void OnDrawGizmos()

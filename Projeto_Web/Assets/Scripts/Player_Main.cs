@@ -168,6 +168,7 @@ public class Player_Main : MonoBehaviour
         Mute();
 
         transform.Find("Sprite").gameObject.SetActive(false);
+        GetComponent<PolygonCollider2D>().enabled = false;
         yield return new WaitForSeconds(1);
         ui.GameOver();
     }

@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Missile : MonoBehaviour
+public class Missile : Weapon
 {
-    public Transform parent;
     public Transform target;
     Rigidbody2D rb;
 
@@ -17,6 +16,8 @@ public class Missile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        Invoke("Explode", 5);
     }
 
     // Update is called once per frame
@@ -27,18 +28,14 @@ public class Missile : MonoBehaviour
         rb.velocity = transform.up * spd;
     }
 
-    private void OnParticleCollision(GameObject other)
+    void Explode()
     {
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnParticleCollision(GameObject other)
     {
-        if(collision.transform != parent)
-        {
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
+        Explode();
     }
 }

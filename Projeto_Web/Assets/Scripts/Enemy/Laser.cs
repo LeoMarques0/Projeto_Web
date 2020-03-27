@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour
+public class Laser : Weapon
 {
 
-    public Transform parent;
     public Vector2 shotDir;
 
     public float spd;
@@ -19,11 +18,5 @@ public class Laser : MonoBehaviour
 
         transform.up = shotDir;
         rb.velocity = shotDir * spd;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform != parent)
-            Destroy(gameObject);
     }
 }
