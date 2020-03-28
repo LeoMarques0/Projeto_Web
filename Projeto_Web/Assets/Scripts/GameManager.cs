@@ -64,15 +64,24 @@ public class GameManager : MonoBehaviour
 
     public void MusicChange(int level)
     {
-        if (level != 0 && music.clip != musicClips[1])
+        switch(level)
         {
-            music.clip = musicClips[1];
-            music.Play();
+            default:
+                music.clip = musicClips[0];
+                break;
+
+            case 2:
+                music.clip = musicClips[1];
+                break;
+
+            case 3:
+                music.clip = musicClips[2];
+                break;
+
+            case 4:
+                music.clip = musicClips[3];
+                break;
         }
-        else if (level == 0 && music.clip != musicClips[0])
-        {
-            music.clip = musicClips[0];
-            music.Play();
-        }
+        music.Play();
     }
 }
