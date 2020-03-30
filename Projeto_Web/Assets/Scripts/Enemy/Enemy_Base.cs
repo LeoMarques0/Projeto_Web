@@ -381,7 +381,7 @@ public class Enemy_Base : MonoBehaviour
             for (int i = 0; i < guns.Length; i++)
             {
                 Laser shotLaser = Instantiate(weapon, guns[i].position, guns[i].rotation).GetComponent<Laser>();
-                shotLaser.shotDir = guns[i].up;
+                shotLaser.shotDir = targetDir;
                 shotLaser.parent = transform;
             }
         }

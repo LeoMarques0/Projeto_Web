@@ -22,6 +22,13 @@ public class ButtonCommands : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 
     public void ChangeMenu(float index)
@@ -63,6 +70,7 @@ public class ButtonCommands : MonoBehaviour
         menu.SetActive(false);
         Time.timeScale = 1;
     }
+
     public void QuitGame()
     {
         Application.Quit();

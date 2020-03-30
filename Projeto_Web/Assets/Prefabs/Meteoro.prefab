@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6286055818831777896}
   - component: {fileID: 6286055818831777897}
   - component: {fileID: 6286055818831777903}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MeteoroSprite (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
