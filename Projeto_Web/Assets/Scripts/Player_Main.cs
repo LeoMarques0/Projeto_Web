@@ -126,6 +126,7 @@ public class Player_Main : MonoBehaviour
                     movement.ver = 0;
                     movement.StartSlowMotionEffect(false);
                     energy = 0;
+                    ui.GameOver();
                 }
 
                 break;
