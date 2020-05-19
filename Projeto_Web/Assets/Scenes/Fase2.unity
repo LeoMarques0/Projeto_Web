@@ -12353,6 +12353,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2388cc0029c6ec4ba4ae057b0621e4a, type: 3}
   - {fileID: 8300000, guid: e211131b9bc5f2b4e96f05eee3d45575, type: 3}
   - {fileID: 8300000, guid: dd7c4e96a74e7e5409d60ae72da19f02, type: 3}
+  - {fileID: 8300000, guid: 781750fed365b1b408d787daee066a79, type: 3}
   sounds: []
   soundVolume: 1
 --- !u!4 &413369555
@@ -13484,7 +13485,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &550264112
 RectTransform:
@@ -14491,8 +14492,8 @@ MonoBehaviour:
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.25
-  m_SoftZoneHeight: 0.25
+  m_SoftZoneWidth: 0.15
+  m_SoftZoneHeight: 0.15
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -20213,7 +20214,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.20833333, y: 0.5208333}
+    oldSize: {x: 0.1, y: 0.25}
     newSize: {x: 0.20833333, y: 0.5208333}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

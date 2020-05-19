@@ -81,6 +81,14 @@ public class GameManager : MonoBehaviour
             case 4:
                 music.clip = musicClips[3];
                 break;
+
+            case 5:
+                music.clip = musicClips[4];
+                break;
+
+            case 6:
+                music.clip = null;
+                break;
         }
         music.Play();
     }

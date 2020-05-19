@@ -14662,8 +14662,8 @@ MonoBehaviour:
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.25
-  m_SoftZoneHeight: 0.25
+  m_SoftZoneWidth: 0.15
+  m_SoftZoneHeight: 0.15
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -22288,7 +22288,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 997645683}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -22296,7 +22296,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
-          m_StringArgument: Menu
+          m_StringArgument: Fase4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1239012786
@@ -23499,7 +23499,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1380756965
 RectTransform:
@@ -23984,6 +23984,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2388cc0029c6ec4ba4ae057b0621e4a, type: 3}
   - {fileID: 8300000, guid: e211131b9bc5f2b4e96f05eee3d45575, type: 3}
   - {fileID: 8300000, guid: dd7c4e96a74e7e5409d60ae72da19f02, type: 3}
+  - {fileID: 8300000, guid: 781750fed365b1b408d787daee066a79, type: 3}
   sounds: []
   soundVolume: 1
 --- !u!4 &1492485622
@@ -29785,7 +29786,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 997645683}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -31113,6 +31114,7 @@ GameObject:
   - component: {fileID: 1831921115}
   - component: {fileID: 1831921114}
   - component: {fileID: 1831921117}
+  - component: {fileID: 1831921118}
   m_Layer: 12
   m_Name: FireElement (1)_0
   m_TagString: Objective
@@ -31217,6 +31219,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1380756961}
+--- !u!61 &1831921118
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831921113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.1, y: 0.25}
+    newSize: {x: 0.1, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.25}
+  m_EdgeRadius: 0
 --- !u!1001 &1833189756
 PrefabInstance:
   m_ObjectHideFlags: 0
