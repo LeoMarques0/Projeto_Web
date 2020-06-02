@@ -244,7 +244,7 @@ MonoBehaviour:
   colliderType: 0
   boxCollider: {fileID: 6286055819205181882}
   boxOffset: {x: 0, y: 0}
-  boxSize: {x: 10, y: 10}
+  boxSize: {x: 15, y: 15}
   capsuleCollider: {fileID: 0}
   capsuleOffset: {x: 0, y: 0}
   capsuleSize: {x: 1, y: 1}
@@ -299,5 +299,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 15, y: 15}
   m_EdgeRadius: 0
